@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-name: Vérification de la base de données
-=======
 
 name: DB Check
->>>>>>> a8cb9879c9c2e56da07ae9a3cc194db201394513
 
 on:
   push:
@@ -13,7 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-<<<<<<< HEAD
       - name: Récupération du code
         uses: actions/checkout@v4
 
@@ -23,13 +18,3 @@ jobs:
       - name: Afficher les étudiants
         run: |
           PGPASSWORD=postgres psql -h localhost -U postgres -d tp -c "SELECT * FROM students;"
-=======
-      - name: Recuperer le code
-        uses: actions/checkout@v4
-
-      - name: Preparer la base de donnees
-        run: bash db/setup.sh
-
-      - name: Afficher les etudiants
-        run: PGPASSWORD=postgres psql -h localhost -U postgres -d tp -c "SELECT * FROM students;"
->>>>>>> a8cb9879c9c2e56da07ae9a3cc194db201394513

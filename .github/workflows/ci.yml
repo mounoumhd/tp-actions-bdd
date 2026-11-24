@@ -13,6 +13,12 @@ jobs:
       - name: Recuperer le code
         uses: actions/checkout@v4
 
+      - name: Verifier les fichiers
+        run: |
+          pwd
+          ls -la
+          ls -la python-app
+
       - name: Preparer la base de donnees
         run: bash db/setup.sh
 
